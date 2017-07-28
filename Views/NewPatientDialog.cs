@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using PatientManager.Contract.Dto;
 using ValueObjects.ContactInformation;
 using ValueObjects.Health;
-using Shared.ValueObjects;
+
 
 namespace Views
 {

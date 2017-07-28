@@ -3,24 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Controllers.ViewInterfaces;
 using Persistance.UnitOfWork;
 using Persistance.Context;
-using Views;
 using AutoMapper;
 using Infrastructure.Mappers;
 //using Castle.Windsor;
 using SimpleInjector;
-using Controllers.Controllers;
-using Controllers.ControllerEvents;
 using log4net;
 using Infrastructure.Services;
 using System.Diagnostics;
 using Infrastructure.ErrorHandlers;
 using System.ServiceProcess;
 using Infrastructure.ServerHosts.WindowsService;
-
-//[assembly: log4net.Config.XmlConfigurator(Watch = true)] // this is only required once
 
 namespace Infrastructure
 {

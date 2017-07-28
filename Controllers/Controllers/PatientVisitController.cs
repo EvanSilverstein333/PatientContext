@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using PatientManager.Contract.Dto;
 using PatientManager.Contract.Commands;
 using PatientManager.Contract.Queries;
-using Shared.ValueObjects;
+
 using ApplicationServices.MessageBus.CommandDispatcher;
 using ApplicationServices.MessageBus.QueryDispatcher;
 using Controllers.ViewInterfaces;

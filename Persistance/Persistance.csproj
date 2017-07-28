@@ -71,10 +71,6 @@
       <Project>{85a5a046-834c-442f-8b84-74f840e844d1}</Project>
       <Name>Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shared\Shared.csproj">
-      <Project>{26caf5d7-2084-4976-874e-3cbd4c116c40}</Project>
-      <Name>Shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

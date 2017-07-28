@@ -13,7 +13,7 @@ using Controllers.ControllerEvents;
 using PatientManager.Contract.Commands;
 using PatientManager.Contract.Dto;
 using PatientManager.Contract.Queries;
-using Shared.ValueObjects;
+
 
 
 namespace Controllers.Controllers

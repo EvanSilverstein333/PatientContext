@@ -19,15 +19,11 @@ using ApplicationServices.CommandHandlers;
 using ApplicationServices.QueryHandlers;
 using ApplicationServices.EventHandlers;
 using ApplicationServices.CrossCuttingConcerns;
-using Controllers.Controllers;
-using Controllers.ViewInterfaces;
-using Views;
 using Castle.Facilities.TypedFactory;
 using Infrastructure.AbstractFactories;
 using FluentValidation;
 using ApplicationServices.Validation;
 using System.Reflection;
-using Controllers.ControllerEvents;
 using SimpleInjector;
 using SimpleInjector.Diagnostics;
 using log4net;
@@ -54,11 +50,7 @@ namespace Infrastructure
             var container = new Container();
             InfrastructureInstaller.RegisterServices(container);
             ApplicationServicesInstaller.RegisterServices(container);
-            ControllersInstaller.RegisterServices(container);
             PersistanceInstaller.RegisterServices(container);
-            ViewInstaller.RegisterServices(container);
-
-            ViewInstaller.SuppressIocWarnings();
             PersistanceInstaller.SuppressWarnings();
             GetContractTypes();
 

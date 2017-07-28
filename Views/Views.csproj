@@ -174,14 +174,6 @@
       <Project>{ebdd1ce0-70a5-488f-97a1-43e947dabd7e}</Project>
       <Name>PatientManager.Contract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Controllers\Controllers.csproj">
-      <Project>{0f863d19-d098-4110-aeb9-d21d6053117b}</Project>
-      <Name>Controllers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Shared\Shared.csproj">
-      <Project>{26caf5d7-2084-4976-874e-3cbd4c116c40}</Project>
-      <Name>Shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

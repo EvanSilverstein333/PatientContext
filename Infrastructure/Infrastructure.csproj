@@ -92,9 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractFactories\PatientManagerCommandProcessor.cs" />
-    <Compile Include="AbstractFactories\ControllerEventHandlerFactory.cs" />
-    <Compile Include="AbstractFactories\ControllerEventsRaiser.cs" />
-    <Compile Include="AbstractFactories\ControllerFactory.cs" />
     <Compile Include="AbstractFactories\DomainEventProcessor.cs" />
     <Compile Include="AbstractFactories\ExternalMessagePublisher.cs" />
     <Compile Include="AbstractFactories\Logger.cs" />
@@ -104,10 +101,8 @@
     <Compile Include="ErrorHandlers\FatalExceptionHandler.cs" />
     <Compile Include="ErrorHandlers\FatalExceptionObject.cs" />
     <Compile Include="IocInstallers\ApplicationServicesInstaller.cs" />
-    <Compile Include="IocInstallers\ControllersInstaller.cs" />
     <Compile Include="IocInstallers\InfrastructureInstaller.cs" />
     <Compile Include="IocInstallers\PersistanceInstaller.cs" />
-    <Compile Include="IocInstallers\ViewInstaller.cs" />
     <Compile Include="Mappers\AutoMapperConfiguration.cs" />
     <Compile Include="Mappers\ContactInfoProfile.cs" />
     <Compile Include="Mappers\HealthIdProfile.cs" />
@@ -178,10 +173,6 @@
       <Project>{ebdd1ce0-70a5-488f-97a1-43e947dabd7e}</Project>
       <Name>PatientManager.Contract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Controllers\Controllers.csproj">
-      <Project>{0f863d19-d098-4110-aeb9-d21d6053117b}</Project>
-      <Name>Controllers</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{85a5a046-834c-442f-8b84-74f840e844d1}</Project>
       <Name>Domain</Name>
@@ -189,14 +180,6 @@
     <ProjectReference Include="..\Persistance\Persistance.csproj">
       <Project>{4a6ba3a8-86a0-45ab-9d89-bb5149ed8ad1}</Project>
       <Name>Persistance</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Shared\Shared.csproj">
-      <Project>{26caf5d7-2084-4976-874e-3cbd4c116c40}</Project>
-      <Name>Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Views\Views.csproj">
-      <Project>{797ea19b-e1af-4ee7-bd7d-51f7753868a6}</Project>
-      <Name>Views</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

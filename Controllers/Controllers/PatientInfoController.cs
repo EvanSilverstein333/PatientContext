@@ -9,7 +9,7 @@ using Controllers.ViewInterfaces;
 using PatientManager.Contract.Dto;
 using PatientManager.Contract.Commands;
 using PatientManager.Contract.Queries;
-using Shared.ValueObjects;
+
 
 
 namespace Controllers.Controllers
