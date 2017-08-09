@@ -1,29 +1,14 @@
-# README #
+# PatientContext #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This project is a generic bounded context for managing patient information, which can easily be incorporated into any desktop or web application. The project supports CRUD operations for data on the following: 
+* Patient identity - name, date of birth, sex
+* Patient visit - date, diagnosis
+* Healthcard - health number, version code, expiry date
 
-### What is this repository for? ###
+### Installation ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* This repo contains a setup project for installation on a local machine. It is currently configured to be installed as a windows service, which will run automatically when the local machine starts up.
 
-### How do I get set up? ###
+### Authors ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Evan Silverstein
