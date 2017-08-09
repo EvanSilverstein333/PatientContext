@@ -35,6 +35,7 @@ namespace ApplicationServices.CrossCuttingConcerns
             }
             catch
             {
+                throw;
             }
         }
 
