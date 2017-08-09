@@ -76,9 +76,7 @@ public class PatientController : Controller
 ```
 
 #### Publisher ####
-The Publisher service is configured as a duplex channel with 1-way communication to notify all listeners of a specific event when that event occurs. Each listener may subscribe to 1 or muliple events. A listener is established by implementing the "IPublisherCallback" contract, which can be found in the namespace created upon adding the Publisher service. The IPublisherCallback contract is defined by the following 2 methods:
-* public static void SubscribeToMessages() - this should be called once at the start of your application to begin listening to events
-* public void MessageHandler(MessageWrapper messageWrapper) - this is called each time the publisher notifies the listener of an event
+The Publisher service is configured as a duplex channel with 1-way communication to notify all listeners of a specific event when that event occurs. Each listener may subscribe to 1 or more events. A listener is established by implementing the "IPublisherCallback" contract, which can be found in the namespace created upon adding the Publisher service. The IPublisherCallback contract is defined by the "void MessageHandler(MessageWrapper messageWrapper)" method, which is called each time the publisher notifies a given listener of an event. Each listener must subscribe to events to recieve notifications, which is achieved by calling the "Subscribe(string messageType)" method of the Publisher service. For example:
 
 The components available to use with this service are provided in the [Events directory](https://github.com/EvanSilverstein333/PatientContext/tree/master/Contract/Events) of the Contract Assembly. For example:
 ```
@@ -88,12 +86,12 @@ public class PatientManagerMessageCallback : IPublisherCallback
     using PatientManger.Contract.Events; 
     
     
-    public static void SubscribeToMessages()
+    public static void SubscribeToMessages() //call this at the beginning of your app
     {
-        private static InstanceContext context = new InstanceContext(this) 
+        var context = new InstanceContext(this) //for duplex channel
         var publisher = new PublisherClient(context);
-        publisher.Subscribe(PatientRemovedEvent);
-        publisher.Subscribe(PatientIdentityChangedEvent);
+        publisher.Subscribe(typeof(PatientRemovedEvent).ToString());
+        publisher.Subscribe(typeof(PatientIdentityChangedEvent).ToString());
     }
 
     public void MessageHandler(MessageWrapper messageWrapper)
